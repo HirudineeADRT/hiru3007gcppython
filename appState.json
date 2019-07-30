@@ -1,0 +1,142 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "a601aa16-5b3f-4cb2-af1f-c25964dc6fd1": {
+        "id": "a601aa16-5b3f-4cb2-af1f-c25964dc6fd1",
+        "parent": null,
+        "name": "hiru3007gcppython",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "8aea0669-cb3a-477f-85ae-b50e4a17473c",
+          "f51cebbe-f5ee-4224-b27b-4b836fd1e5e7",
+          "64a98a93-7d53-492c-843b-ff22a4f0481c"
+        ],
+        "isRemovable": false,
+        "filePath": "hiru3007gcppython"
+      },
+      "8aea0669-cb3a-477f-85ae-b50e4a17473c": {
+        "id": "8aea0669-cb3a-477f-85ae-b50e4a17473c",
+        "parent": "a601aa16-5b3f-4cb2-af1f-c25964dc6fd1",
+        "name": "function.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru3007gcppython/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ]
+      },
+      "7971cf44-50e1-49a7-8aad-074a11c9a4ad": {
+        "id": "7971cf44-50e1-49a7-8aad-074a11c9a4ad",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.hiru3007gcppythonfunction = require(\"./hiru3007gcppython/function.js\").handler;\nexports.hiru3007gcppythondependencytest = require(\"./hiru3007gcppython/dependencytest.py\").handler;"
+      },
+      "f51cebbe-f5ee-4224-b27b-4b836fd1e5e7": {
+        "id": "f51cebbe-f5ee-4224-b27b-4b836fd1e5e7",
+        "parent": "a601aa16-5b3f-4cb2-af1f-c25964dc6fd1",
+        "name": "dependencytest.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru3007gcppython/dependencytest.py",
+        "code": "import numpy\n\ndef handler(request, response):\n    \n    x = numpy.array([[7,8,5],[3,5,7]],np.int32)\n    response.send({\"message\": x})\n",
+        "config": {
+          "runtime": "python3.6",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ]
+      },
+      "64a98a93-7d53-492c-843b-ff22a4f0481c": {
+        "id": "64a98a93-7d53-492c-843b-ff22a4f0481c",
+        "parent": "a601aa16-5b3f-4cb2-af1f-c25964dc6fd1",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru3007gcppython/__init__.py",
+        "code": ""
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "a601aa16-5b3f-4cb2-af1f-c25964dc6fd1",
+    "openFiles": [
+      "f51cebbe-f5ee-4224-b27b-4b836fd1e5e7"
+    ],
+    "currentFileId": "f51cebbe-f5ee-4224-b27b-4b836fd1e5e7",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "f51cebbe-f5ee-4224-b27b-4b836fd1e5e7",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/hiru3007gcppython",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "numpy": {
+          "name": "numpy",
+          "version": "1.14.3",
+          "dev": false,
+          "language": "python"
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "hiru3007gcppython",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
+    "platformRegions": {},
+    "lastSave": 1564487293095
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "hiru3007gcppython",
+      "url": "https://github.com/HirudineeADRT/hiru3007gcppython",
+      "branches": []
+    }
+  }
+}
